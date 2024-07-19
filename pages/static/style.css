@@ -1,190 +1,92 @@
- 
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-  }
-
-table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-  }
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: left;
-  }
-th {
-    background-color: #f2f2f2;
-  }
-tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200');
-
-body  {
-background-image: url('spheres-g14fa6d1b1_1920.jpg');
-/* background image copied from https://cdn.pixabay.com/photo/2020/12/05/19/01/spheres-5806920_1280.jpg*/
-
+body {	 background-color: #000000;
+background-attachment: fixed;
+background-position: center; 
 background-size:cover;
-    -webkit-animation: slidein 100s;
-    animation: slidein 50s;
-
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards;
-
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-
-    -webkit-animation-direction: alternate;
-    animation-direction: alternate;              
-}
-
-@-webkit-keyframes slidein {
-from {background-position: top; background-size:3000px; }
-to {background-position: -100px 0px;background-size:2750px;}
-}
-
-@keyframes slidein {
-from {background-position: top;background-size:3000px; }
-to {background-position: -100px 0px;background-size:2750px;}
 
 }
-p{
-text-shadow: 2px 2px 4px #000000;
+#myVideo {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+ z-index: -100;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-* {
-padding: 0;
-margin: 0;
+.topnav {
+background-color: #444;
+overflow: hidden;
+position: fixed;
+top: 0;
+left: 0;
+width: 100% ;
 }
 
-h1 {
-font-family: "Montserrat Medium";
-max-width: 40ch;
+.topnav a {
+float: left;
+color: #f2f2f2;
 text-align: center;
-transform: scale(0.94);
-animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-text-shadow: 2px 2px 4px #000000;
-}
-.row h2 {
-font-family: "Montserrat Medium";
-text-shadow: 2px 2px 4px #000000;
-}
-@keyframes scale {
-100% {
-transform: scale(1);
-}
+padding: 14px 130px;
+text-decoration: none;
+font-size: 17px;
 }
 
-span {
-display: inline-block;
-opacity: 0;
-filter: blur(4px);
+.topnav a:hover {
+background-color: #ddd;
+color: black;
+}
+.contenth {
+
+background: rgba(0, 0, 0, 0.5);
+color: #0FFFFF;
+margin:0;
+width: auto;
+position: center;
+text-align: center;
+font-size: 125%;
+padding: 20px;
+
 }
 
-span:nth-child(1) {
-animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+.movie
+{
+border:0px double black;
+margin:20px;
+padding:15px;
+background-color:#000000;
+border-radius:5px;
+color: yellow;
 }
 
-span:nth-child(2) {
-animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(3) {
-animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(4) {
-animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(5) {
-animation: fade-in 0.8s 0.5s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(6) {
-animation: fade-in 0.8s 0.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(7) {
-animation: fade-in 0.8s 0.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(8) {
-animation: fade-in 0.8s 0.8s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(9) {
-animation: fade-in 0.8s 0.9s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(10) {
-animation: fade-in 0.8s 1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(11) {
-animation: fade-in 0.8s 1.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
-}
-
-span:nth-child(12) {
-animation: fade-in 0.8s 1.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+.movieimage
+{
+position:left;
+float:left;
+padding:10px;
 }
 
 
-@keyframes fade-in {
-100% {
-opacity: 1;
-filter: blur(0);
+.poster
+{
+width:100%;
 }
-}
-
-/* inspiration took from design inspiration https://alvarotrigo.com/blog/css-text-animations/*/
-
-.center {
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-height: 100vh;
+.link
+{
+color: white;
 }
 
-.center h1 {
-font-size: 3rem;
-margin-bottom: 2rem;
-color: #fff;
-font-family: 'Source Code Pro', monospace;
-text-transform: uppercase;
-}
 
-.center form {
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-border-radius: 5px;
-padding: 1rem;
-}
+.section
+{
+-moz-column-count:3; /* Firefox */
+-webkit-column-count:3; /* Safari and Chrome */
+column-count:3;
 
-.center form label {
-display: block;
-margin-bottom: 0.5rem;
-font-weight: bold;
-}
+-moz-column-gap:40px; /* Firefox */
+-webkit-column-gap:40px; /* Safari and Chrome */
+column-gap:40px;
 
-.center form input {
-margin-right: 1rem;
-}
-
-.my-table {
-max-width: 100%;
-overflow-x: auto;
-}
-
-.navbar {
-background-color: #e2edf3;
-}
+-moz-column-rule:4px outset	#00FFFF; /* Firefox */
+-webkit-column-rule:4px outset 	#00FFFF; /* Safari and Chrome */
+column-rule:4px outset 	#00FFFF;
+} 
